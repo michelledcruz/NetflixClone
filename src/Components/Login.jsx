@@ -1,17 +1,36 @@
-import logo from "../assets/NetflixLogoSvg.svg";
+import React from "react";
+import "./Login.css"; // Import the CSS file
+
 const Login = () => {
   return (
-    <header className="bg-black text-white fixed w-full top-0 z-50">
-      <div className="flex justify-between px-6 py-4">
-        <div className="flex">
-          <img
-            className="w-56 sm:w-36 cursor-pointer"
-            src={logo}
-            alt="Netflix Logo"
+    <div className="login-container flex items-center justify-center">
+      <form className="bg-black pt-10 py-24 px-16  z-10 w-2/6">
+        <h1 className="text-white text-3xl text-center pb-10">Sign In</h1>
+        <div className="mb-8 text-2xl">
+          <input
+            type="email"
+            id="email"
+            className="w-full p-2 text-black rounded"
+            placeholder="Enter your email"
           />
         </div>
-      </div>
-    </header>
+        <div className="mb-8 text-2xl">
+          <input
+            type="password"
+            id="password"
+            className="w-full p-2 text-black rounded"
+            placeholder="Enter your password"
+          />
+        </div>
+        <button
+          type="submit"
+          className="w-full bg-red-600 text-white p-2 text-3xl font-bold rounded hover:bg-red-500 transition duration-200"
+        >
+          Login
+        </button>
+      </form>
+    </div>
   );
 };
+
 export default Login;

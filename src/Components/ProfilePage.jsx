@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"; // Import Link component
 import ProfilePicture1 from "../assets/ProfilePicture1.svg";
 import ProfilePicture2 from "../assets/ProfilePicture2.svg";
 import ProfilePicture3 from "../assets/ProfilePicture3.svg";
@@ -12,26 +13,30 @@ const ProfilePage = () => {
         </h1>
       </div>
       <div className="flex flex-wrap items-center justify-center gap-12 mt-16">
-        <div className="text-center">
-          <img src={ProfilePicture1} />
+        <Link to="/profile/browse" className="text-center">
+          <img src={ProfilePicture1} alt="Michelle's Profile" />
           <p className="text-gray-500 text-4xl mt-8">Michelle</p>
-        </div>
-        <div className="text-center">
-          <img src={ProfilePicture2} />
+        </Link>
+        <Link to="/profile/browse" className="text-center">
+          <img src={ProfilePicture2} alt="Rohit's Profile" />
           <p className="text-gray-500 text-4xl mt-8">Rohit</p>
-        </div>
-        <div className="text-center">
-          <img src={ProfilePicture3} />
+        </Link>
+        <Link to="/profile/browse" className="text-center">
+          <img src={ProfilePicture3} alt="Lance's Profile" />
           <p className="text-gray-500 text-4xl mt-8">Lance</p>
-        </div>
-        <div className="text-center">
-          <img src={ProfilePicture3} />
+        </Link>
+        <Link to="/profile/browse" className="text-center">
+          <img src={ProfilePicture3} alt="Smith's Profile" />
           <p className="text-gray-500 text-4xl mt-8">Smith</p>
-        </div>
-        <div className="text-center">
-          <img className="w-32 h-48 rounded-full" src={AddProfile} />
+        </Link>
+        <Link to="/profile/browse" className="text-center">
+          <img
+            className="w-32 h-48 rounded-full"
+            src={AddProfile}
+            alt="Add Profile"
+          />
           <p className="text-gray-500 text-4xl mt-8">Lira</p>
-        </div>
+        </Link>
       </div>
     </>
   );
