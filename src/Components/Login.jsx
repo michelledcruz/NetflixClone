@@ -3,7 +3,7 @@ import "./Login.css"; // Import the CSS file
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Login = () => {
-  const { loginWithRedirect, logout } = useAuth0();
+  const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
 
   return (
     <div className="login-container flex items-center justify-center">
@@ -37,15 +37,6 @@ const Login = () => {
           onClick={() => loginWithRedirect()}
         >
           Login with Google
-        </button>
-        <button
-          type="submit"
-          className="w-full bg-red-700 text-white p-2 text-3xl  rounded hover:bg-red-500 transition duration-200"
-          onClick={() =>
-            logout({ logoutParams: { returnTo: window.location.origin } })
-          }
-        >
-          Log Out
         </button>
       </form>
     </div>
