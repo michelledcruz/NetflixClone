@@ -8,6 +8,7 @@ A Netflix-like UI built with React, TMDB API for movie data, Slick Slider for ca
 - **Movie Banners**: Displays popular movies with a large banner.
 - **Carousel Slider**: Slick Slider integration for displaying movies in a scrollable carousel format.
 - **Dynamic Routing**: Navigation between the home page, login page, profile page, and individual movie details using React Router.
+- **Authentication with Auth0**: User authentication system using Auth0 for secure login and profile management.
 - **API Integration**: Fetches real-time data from TMDB API to display popular movies.
 
 ## Tech Stack
