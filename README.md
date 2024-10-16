@@ -1,8 +1,21 @@
-# React + Vite
+# Netflix Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Netflix-like UI built with React, TMDB API for movie data, Slick Slider for carousels, and React Router for navigating between pages.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: A clean, modern interface similar to Netflix.
+- **Movie Banners**: Displays popular movies with a large banner.
+- **Carousel Slider**: Slick Slider integration for displaying movies in a scrollable carousel format.
+- **Dynamic Routing**: Navigation between the home page, login page, profile page, and individual movie details using React Router.
+- **API Integration**: Fetches real-time data from TMDB API to display popular movies.
+
+## Tech Stack
+
+- **React**: Core framework for building the UI components.
+- **TMDB API**: Used to fetch movie details such as titles, images, and categories.
+- **Slick Slider**: A responsive carousel/slider component for displaying movies.
+- **React Router**: Handles routing between different pages of the app (e.g., Login, Home, Profile, Movie Details).
+
+
+
