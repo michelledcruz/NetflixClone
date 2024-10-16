@@ -11,6 +11,7 @@ const BigBanner = () => {
     );
     const data = await response.json();
     setBanner(data.results[0]);
+    console.log(data.results[0]);
   };
 
   useEffect(() => {
@@ -18,11 +19,11 @@ const BigBanner = () => {
   }, []);
 
   return (
-    <div className="movie-list w-full relative h-1/2">
-      <div className="w-full h-full">
-        <div className="movie-card">
+    <div className="movie-list w-full relative">
+      <div className="w-full ">
+        <div className="movie-card ">
           <img
-            src={`https://image.tmdb.org/t/p/w780${banner.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w780${banner.backdrop_path}`}
             className="w-full h-full object-cover object-top"
           />
         </div>

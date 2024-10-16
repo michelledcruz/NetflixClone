@@ -3,9 +3,11 @@ import Header from "./Components/Header";
 import ProfilePage from "./Components/ProfilePage";
 import Login from "./Components/Login";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import BigBanner from "./Components/BigBanner";
 import MovieList from "./Components/MovieList";
 import BigBanner from "./Components/BigBanner";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Action from "./Components/Action";
 
 const Home = () => {
   return (
@@ -20,6 +22,7 @@ const Browse = () => {
     <>
       <BigBanner />
       <MovieList />
+      <Action />
     </>
   );
 };

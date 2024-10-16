@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
 
-const MovieList = () => {
-  const [movies, setMovies] = useState([]);
+const Action = () => {
+  const [actions, setAction] = useState([]);
   //   const [searchTerm, setSearchTerm] = useState("");
 
   const API_KEY = "fcf01e67d23581f0c9d8d299581687d9";
 
-  const fetchMovies = async () => {
+  const fetchAction = async () => {
     const response = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
+      `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=28`
     );
     const data = await response.json();
-    setMovies(data.results.slice(0, 15));
+    setAction(data.results.slice(0, 15));
   };
 
   useEffect(() => {
-    fetchMovies();
+    fetchAction();
   }, []);
 
   //slick settings
@@ -31,15 +31,15 @@ const MovieList = () => {
 
   return (
     <div className="movie-list w-full overflow-hidden mb-6">
-      <h1 className="text-white mt-10 text-2xl mb-6">Popular Movies</h1>
+      <h1 className="text-white mt-10 text-2xl mb-6">Action/Drama</h1>
       <div className="slider-container">
         <Slider {...settings}>
-          {movies.map((movie) => (
-            <div className="movie-card px-2" key={movie.id}>
+          {actions.map((action) => (
+            <div className="movie-card px-2" key={action.id}>
               <img
-                src={`https://image.tmdb.org/t/p/w780${movie.backdrop_path}`}
+                src={`https://image.tmdb.org/t/p/w780${action.backdrop_path}`}
               />
-              <h2 className="text-white mt-2">{movie.title}</h2>
+              <h2 className="text-white mt-2">{action.title}</h2>
             </div>
           ))}
         </Slider>
@@ -48,4 +48,4 @@ const MovieList = () => {
   );
 };
 
-export default MovieList;
+export default Action;
