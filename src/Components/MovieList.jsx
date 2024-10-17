@@ -9,7 +9,7 @@ const MovieList = () => {
 
   const fetchMovies = async () => {
     const response = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&with_genres=${genreId}`
     );
     const data = await response.json();
     setMovies(data.results.slice(0, 15));
@@ -17,7 +17,7 @@ const MovieList = () => {
 
   useEffect(() => {
     fetchMovies();
-  }, []);
+  }, [genreId]);
 
   //slick settings
   const settings = {
@@ -31,7 +31,7 @@ const MovieList = () => {
 
   return (
     <div className="movie-list w-full overflow-hidden mb-6">
-      <h1 className="text-white mt-10 text-2xl mb-6">Popular Movies</h1>
+      <h1 className="text-white mt-10 text-2xl mb-6">{genreName}</h1>
       <div className="slider-container">
         <Slider {...settings}>
           {movies.map((movie) => (

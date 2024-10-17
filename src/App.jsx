@@ -8,7 +8,6 @@ import BigBanner from "./Components/BigBanner";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Action from "./Components/Action";
-import Horror from "./Components/Horror";
 
 const Home = () => {
   return (
@@ -24,7 +23,6 @@ const Browse = () => {
       <BigBanner />
       <MovieList />
       <Action />
-      <Horror />
     </>
   );
 };
